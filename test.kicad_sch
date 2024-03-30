@@ -5,7 +5,7 @@
   (paper "A4")
 
   (lib_symbols
-    (symbol "4xxx_IEEE:4555" (in_bom yes) (on_board yes)
+    (symbol "4xxx_IEEE:4555" (pin_names (offset 0.508)) (in_bom yes) (on_board yes)
       (property "Reference" "U" (at 6.35 8.89 0)
         (effects (font (size 1.27 1.27)))
       )
@@ -19,10 +19,6 @@
         (effects (font (size 1.27 1.27)) hide)
       )
       (symbol "4555_0_1"
-        (rectangle (start -6.35 6.35) (end 6.35 -6.35)
-          (stroke (width 0.254) (type default))
-          (fill (type background))
-        )
         (pin power_in line (at 0 10.16 270) (length 3.81)
           (name "Vdd" (effects (font (size 1.27 1.27))))
           (number "16" (effects (font (size 1.27 1.27))))
@@ -30,6 +26,10 @@
         (pin power_in line (at 0 -10.16 90) (length 3.81)
           (name "Vss" (effects (font (size 1.27 1.27))))
           (number "8" (effects (font (size 1.27 1.27))))
+        )
+        (rectangle (start -6.35 6.35) (end 6.35 -6.35)
+          (stroke (width 0.254) (type default))
+          (fill (type background))
         )
       )
       (symbol "4555_1_1"
@@ -183,7 +183,7 @@
         )
       )
     )
-    (symbol "power:+5V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+    (symbol "power:+5V" (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -3.81 0)
         (effects (font (size 1.27 1.27)) hide)
       )
@@ -235,7 +235,7 @@
         )
       )
     )
-    (symbol "power:GND" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+    (symbol "power:GND" (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -6.35 0)
         (effects (font (size 1.27 1.27)) hide)
       )
@@ -277,7 +277,6 @@
     )
   )
 
-
   (wire (pts (xy 102.87 86.995) (xy 116.205 86.995))
     (stroke (width 0) (type default))
     (uuid 22cbbe9b-59a2-4f03-8b96-8eaabddafea6)
@@ -295,8 +294,9 @@
     (uuid e80f660f-a8d2-4014-be92-6f6e3ef0ca53)
   )
 
+
   (symbol (lib_id "power:+5V") (at 111.125 68.58 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid 498dd6a2-20e8-4b7e-88f1-41fc82cfa1c1)
     (property "Reference" "#PWR02" (at 111.125 72.39 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -312,16 +312,13 @@
     )
     (pin "1" (uuid 4f715a90-6f11-490e-9e84-939f5110dd60))
     (instances
-      (project "test"
-        (path "/0cec2894-acb4-4a0c-ac75-fa3bc98e6f77"
-          (reference "#PWR02") (unit 1)
-        )
+      (project "unknown"
       )
     )
   )
 
   (symbol (lib_id "Device:C") (at 102.87 83.185 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid 4c5e406a-c67d-46ff-b512-f00ed752e896)
     (property "Reference" "C1" (at 106.68 81.915 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -338,42 +335,36 @@
     (pin "2" (uuid ec4bcfe5-ca07-4a95-bd65-ad0c543e8345))
     (pin "1" (uuid 988ea4fe-44f5-4a83-b641-3a148d246c65))
     (instances
-      (project "test"
-        (path "/0cec2894-acb4-4a0c-ac75-fa3bc98e6f77"
-          (reference "C1") (unit 1)
-        )
+      (project "unknown"
       )
     )
   )
 
-  (symbol (lib_id "Device:R") (at 138.43 87.63 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+  (symbol (lib_id "Device:R") (at 135.255 90.17 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid b7f8f00c-ef32-4eda-be9c-c46628c9b60e)
-    (property "Reference" "R1" (at 140.97 86.36 0)
+    (property "Reference" "R1" (at 137.795 88.9 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (at 140.97 88.9 0)
+    (property "Value" "R" (at 137.795 91.44 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 136.652 87.63 90)
+    (property "Footprint" "" (at 133.477 90.17 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 138.43 87.63 0)
+    (property "Datasheet" "~" (at 135.255 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "2" (uuid 7ee8ae89-1752-4a2b-9692-a907c21c4a46))
     (pin "1" (uuid 07df90bb-6d82-469c-9067-27ac82cbae80))
     (instances
-      (project "test"
-        (path "/0cec2894-acb4-4a0c-ac75-fa3bc98e6f77"
-          (reference "R1") (unit 1)
-        )
+      (project "unknown"
       )
     )
   )
 
   (symbol (lib_id "4xxx_IEEE:4555") (at 126.365 73.66 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid c06cdac5-f8be-4669-863d-105230b063ef)
     (property "Reference" "U1" (at 128.5591 62.23 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -404,16 +395,13 @@
     (pin "16" (uuid fc5ffecc-5eaf-4478-a8a6-e36a23280fb2))
     (pin "4" (uuid dd803cb4-d5c7-46e6-98fa-065814dcccad))
     (instances
-      (project "test"
-        (path "/0cec2894-acb4-4a0c-ac75-fa3bc98e6f77"
-          (reference "U1") (unit 1)
-        )
+      (project "unknown"
       )
     )
   )
 
   (symbol (lib_id "power:GND") (at 122.555 93.345 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid e844ae9b-9bb3-4539-9124-b5fb2c555a62)
     (property "Reference" "#PWR01" (at 122.555 99.695 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -429,15 +417,8 @@
     )
     (pin "1" (uuid 818a9ba2-e6c8-47bd-8cfc-732ca081253b))
     (instances
-      (project "test"
-        (path "/0cec2894-acb4-4a0c-ac75-fa3bc98e6f77"
-          (reference "#PWR01") (unit 1)
-        )
+      (project "unknown"
       )
     )
-  )
-
-  (sheet_instances
-    (path "/" (page "1"))
   )
 )
